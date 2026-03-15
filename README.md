@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ecoyaan Checkout Flow
 
-## Getting Started
+A simple checkout flow built using **Next.js** and **Tailwind CSS**.
+This project demonstrates a basic e-commerce checkout process including cart summary, shipping details, payment, and order success page.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tech Stack
+
+* Next.js (App Router)
+* React
+* Tailwind CSS
+* TypeScript
+
+---
+
+## 📂 Project Structure
+
+```
+ecoyaan-checkout
+│
+├── app
+│   ├── cart
+│   │   └── page.tsx
+│   ├── shipping
+│   │   └── page.tsx
+│   ├── payment
+│   │   └── page.tsx
+│   ├── success
+│   │   └── page.tsx
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── data
+│   └── cartData.ts
+│
+├── public
+│
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* Display cart items
+* Calculate subtotal and total
+* Shipping details page
+* Payment page
+* Order success confirmation
+* Clean UI using Tailwind CSS
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛒 Checkout Flow
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Cart Page**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   * Displays cart items
+   * Shows subtotal and shipping
 
-## Deploy on Vercel
+2. **Shipping Page**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   * User enters shipping details
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Payment Page**
+
+   * Payment form UI
+
+4. **Success Page**
+
+   * Order confirmation message
+
+---
+
+## ▶️ Run Project Locally
+
+Clone the repository:
+
+```
+git clone https://github.com/satendra1006/ecoyaan-checkout.git
+```
+
+Go to the project folder:
+
+```
+cd ecoyaan-checkout
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Run the development server:
+
+```
+npm run dev
+```
+
+Open in browser:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📌 Notes
+
+This project is created as part of a **frontend assignment** to demonstrate understanding of Next.js routing, component structure, and UI development.
+
+---
+
+## 👨‍💻 Author
+
+**Satendra Rai**
+
+GitHub: https://github.com/satendra1006
