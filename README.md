@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ecoyaan Checkout Flow
 
-## Getting Started
+A simplified checkout flow built using **Next.js** and **React**.
+This project demonstrates a basic e-commerce checkout experience where users can review their cart, enter shipping details, and simulate a payment confirmation.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Live Demo
+
+Deployed Application: (Add your Vercel link here)
+
+---
+
+## 📌 Features
+
+* Cart / Order Summary page displaying products
+* Server-side rendered cart data
+* Shipping Address form with basic validation
+* Payment confirmation page
+* Order success page
+* Responsive UI using Tailwind CSS
+* Multi-step checkout flow
+
+---
+
+## 🛠 Tech Stack
+
+* **Next.js**
+* **React**
+* **Tailwind CSS**
+* **Context API / Local Storage for state**
+
+---
+
+## 📂 Project Structure
+
+```
+app
+ ├ cart
+ │   └ page.tsx
+ ├ shipping
+ │   └ page.tsx
+ ├ payment
+ │   └ page.tsx
+ ├ success
+ │   └ page.tsx
+ ├ layout.tsx
+ └ page.tsx
+
+data
+ └ cartData.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Mock Data
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Cart items are rendered using mock JSON data provided in the assignment.
+The data includes:
 
-## Learn More
+* product name
+* price
+* quantity
+* shipping fee
 
-To learn more about Next.js, take a look at the following resources:
+This data is fetched and rendered on the **Cart page using server-side rendering.**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔄 Checkout Flow
 
-## Deploy on Vercel
+```
+Cart Page
+   ↓
+Shipping Address
+   ↓
+Payment Confirmation
+   ↓
+Order Success
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧪 Form Validation
+
+The shipping form validates:
+
+* Required fields
+* Valid email format
+* 10-digit phone number
+
+---
+
+## 💻 Run Locally
+
+Clone the repository:
+
+```
+git clone <your-repo-link>
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Run development server:
+
+```
+npm run dev
+```
+
+Open browser:
+
+```
+http://localhost:3000/cart
+```
+
+---
+
+## 📌 Notes
+
+This project is a functional MVP designed to demonstrate frontend architecture, SSR usage, and UI flow for a checkout experience.
+
+Payment functionality is simulated and no real transactions occur.
+
+---
+
+## 👨‍💻 Author
+
+Satendra Rai
