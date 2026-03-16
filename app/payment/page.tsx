@@ -1,14 +1,25 @@
 "use client"
 
 import { useRouter } from "next/navigation"
+import { useEffect, useState } from "react"
 
 export default function PaymentPage() {
 
   const router = useRouter()
 
-  const address = JSON.parse(
-    localStorage.getItem("address") || "{}"
-  )
+  const [address, setAddress] = useState({
+    name: "",
+    city: "",
+    state: ""
+  })
+
+  useEffect(() => {
+    const storedAddress = localStorage.getItem("address")
+
+    if (storedAddress) {
+      setAddress(JSON.parse(storedAddress))
+    }
+  }, [])
 
   return (
     <div className="max-w-xl mx-auto p-6">
@@ -30,7 +41,7 @@ export default function PaymentPage() {
       </div>
 
       <button
-        onClick={()=>router.push("/success")}
+        onClick={() => router.push("/success")}
         className="mt-6 bg-green-600 text-white px-6 py-2 rounded"
       >
         Pay Securely
