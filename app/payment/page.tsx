@@ -1,12 +1,13 @@
 "use client"
 
+export const dynamic = "force-dynamic"
+
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 
 export default function PaymentPage() {
 
   const router = useRouter()
-
   const [address, setAddress] = useState({
     name: "",
     city: "",
@@ -15,7 +16,6 @@ export default function PaymentPage() {
 
   useEffect(() => {
     const storedAddress = localStorage.getItem("address")
-
     if (storedAddress) {
       setAddress(JSON.parse(storedAddress))
     }
@@ -23,21 +23,13 @@ export default function PaymentPage() {
 
   return (
     <div className="max-w-xl mx-auto p-6">
-
-      <h1 className="text-xl font-bold mb-4">
-        Confirm Order
-      </h1>
+      <h1 className="text-xl font-bold mb-4">Confirm Order</h1>
 
       <div className="border p-4 rounded">
-
-        <h2 className="font-semibold mb-2">
-          Shipping Address
-        </h2>
-
+        <h2 className="font-semibold mb-2">Shipping Address</h2>
         <p>{address.name}</p>
         <p>{address.city}</p>
         <p>{address.state}</p>
-
       </div>
 
       <button
@@ -46,7 +38,6 @@ export default function PaymentPage() {
       >
         Pay Securely
       </button>
-
     </div>
   )
 }
