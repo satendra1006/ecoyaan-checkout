@@ -1,12 +1,19 @@
 "use client"
 export const dynamic = "force-dynamic"
+
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
+
+type Address = {
+  name: string
+  city: string
+  state: string
+}
 
 export default function PaymentPage() {
 
   const router = useRouter()
-  const [address, setAddress] = useState(null)
+  const [address, setAddress] = useState<Address | null>(null)
 
   useEffect(() => {
     const stored = localStorage.getItem("address")
